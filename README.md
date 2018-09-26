@@ -1,2 +1,2 @@
-# dom-size-monitor
-实时监听DOM元素大小变化
+# build dom-size-monitor
+构建开源项目模板
