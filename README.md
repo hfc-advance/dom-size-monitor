@@ -1,2 +1,2 @@
-# build dom-size-monitor
+# build
 构建开源项目模板
