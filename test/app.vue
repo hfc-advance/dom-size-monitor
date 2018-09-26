@@ -5,8 +5,25 @@
 </template>
 
 <script>
+import { monitor } from '../src/main.js'
 export default {
-  name: 'APP'
+  name: 'APP',
+  created () {
+    let monitor1 = monitor(document.body, this.test)
+    monitor1.unMonitor()
+    setTimeout(() => {
+      monitor(document.querySelector('.test'), this.test1)
+      monitor(document.querySelector('.test'), this.test1)
+    }, 100)
+  },
+  methods: {
+    test () {
+      console.log('test')
+    },
+    test1 () {
+      console.log('test1')
+    }
+  }
 }
 </script>
 
