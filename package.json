@@ -1,8 +1,9 @@
 {
   "name": "dom-size-monitor",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "监听元素大小变化",
+  "main": "dist/dom-size-monitor.esm.js",
+  "module": "dist/dom-size-monitor.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "#": "清除文件",
@@ -14,8 +15,20 @@
     "####": "开发调试",
     "dev": "webpack-dev-server --mode development --progress"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "崔海峰",
+    "dom",
+    "dom-size",
+    "dom-size-monitor",
+    "cuihaifeng",
+    "element"
+  ],
+  "files": [
+    "src",
+    "dist",
+    "test"
+  ],
+  "author": "崔海峰",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.1.5",
@@ -32,10 +45,11 @@
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
-    "cache-loader": "^1.2.2",
+    "cache-loader": "1.2.2",
     "chalk": "^2.4.1",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
+    "cz-conventional-changelog": "^2.1.0",
     "del": "^3.0.0",
     "error-overlay-webpack-plugin": "^0.1.5",
     "eslint": "^5.6.0",
@@ -82,5 +96,10 @@
   "dependencies": {
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

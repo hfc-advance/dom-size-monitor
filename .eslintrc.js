@@ -28,7 +28,8 @@ module.exports = {
     // 暂时去除 vue v-for 必须设置 key 的 lint
     'vue/require-v-for-key': 'off',
     'vue/valid-v-for': 'off',
-    'spaced-comment': 'off'
+    'spaced-comment': 'off',
+    'semi': 'off'
     // 'spaced-comment': ['error', 'always', { 'markers': ['?', '!', '*'] }]
   }
 }

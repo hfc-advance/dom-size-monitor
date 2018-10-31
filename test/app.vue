@@ -1,28 +1,19 @@
 <template>
   <div>
-    <div class="test">小崔2</div>
+    <div class="test" ref="test">小崔2</div>
   </div>
 </template>
 
 <script>
-import { monitor } from '../src/main.js'
+import { bind } from '../dist/dom-size-monitor.esm.js'
 export default {
   name: 'APP',
-  created () {
-    let monitor1 = monitor(document.body, this.test)
-    monitor1.unMonitor()
+  mounted () {
     setTimeout(() => {
-      monitor(document.querySelector('.test'), this.test1)
-      monitor(document.querySelector('.test'), this.test1)
-    }, 100)
-  },
-  methods: {
-    test () {
-      console.log('test')
-    },
-    test1 () {
-      console.log('test1')
-    }
+      bind(this.$refs.test, result => {
+        console.error(result)
+      })
+    }, 1000)
   }
 }
 </script>
